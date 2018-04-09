@@ -2,7 +2,7 @@
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "University of Connecticut"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "Room #127, School of Business (BUSN), 2100 Hillside Rd, Storrs, CT 06269"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "2100 Hillside Rd, Storrs, CT 06269"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "41.805992,-72.253772"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
@@ -87,7 +87,7 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>Where: Room #127, School of Business(BUSN), </strong>
   {{page.address}}.
   Get directions with
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
@@ -116,7 +116,7 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
 {% endcomment %}
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges to install software
   on. They should have a few specific software packages installed (listed
   <a href="#setup">below</a>). They are also required to abide by
   {% if page.carpentry == "swc" %}
