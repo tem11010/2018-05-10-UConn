@@ -90,9 +90,10 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
   <strong>Where: Room #127, School of Business(BUSN), </strong>
   {{page.address}}.
   Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
+  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16" target="_blank">OpenStreetMap</a>
   or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+  <a href="//maps.google.com/maps?q={{page.latlng}}" target="_blank">Google Maps</a>.
+  Parking for non UConn folks is best at <a href="//maps.uconn.edu/m/map/SPRK" target="_blank">South Garage</a>
 </p>
 {% endif %}
 
@@ -126,7 +127,7 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <a href="{{site.swc_site}}/conduct.html" target="_blank">Code of Conduct</a>.
 </p>
 
 {% comment %}
