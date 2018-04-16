@@ -298,69 +298,16 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
+{% comment %}
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
   <h3>The Bash Shell</h3>
-
   <p>
     Bash is a commonly-used shell that gives you the power to do simple
     tasks more quickly.
   </p>
-
   <div class="row">
     <div class="col-md-4">
       <h4 id="shell-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
-          <ol>
-            {% comment %} Git 2.8.2 Setup {% endcomment %}
-            {% comment %} Information {% endcomment %}
-            <li>Click on "Next".</li>
-            {% comment %} Select Components {% endcomment %}
-            <li>Click on "Next".</li>
-            {% comment %} Adjusting your PATH environment {% endcomment %}
-            <li>
-              <strong>
-                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
-              </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
-            </li>
-            {% comment %} Choosing the SSH executable {% endcomment %}
-            <li>Click on "Next".</li>
-            {% comment %} Configuring the line ending conversions {% endcomment %}
-            <li>
-              <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
-              </strong>
-            </li>
-            {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
-            <li>
-              <strong>
-                Keep "Use Windows' default console window" selected and click on "Next".
-              </strong>
-            </li>
-            {% comment %} Configuring experimental performance tweaks {% endcomment %}
-            <li>Click on "Install".</li>
-            {% comment %} Installing {% endcomment %}
-            {% comment %} Completing the Git Setup Wizard {% endcomment %}
-            <li>Click on "Finish".</li>
-          </ol>
-        </li>
-        <li>
-          If your "HOME" environment variable is not set (or you don't know what this is):
-          <ol>
-            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
-            <li>
-              Type the following line into the command prompt window exactly as shown:
-              <p><code>setx HOME "%USERPROFILE%"</code></p>
-            </li>
-            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
-          </ol>
-        </li>
-      </ol>
       <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
     <div class="col-md-4">
@@ -387,6 +334,7 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
     </div>
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
+{% endcomment %}
 
 <div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability
            is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
@@ -410,14 +358,73 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
     for keeping your email address private</a> provided at GitHub.
   </p>
 
+  <p>
+    <a href="https://education.github.com/" target="_blank">Github for Education</a> 
+    offers a free 2-year plan for students and educators 
+    that allows you to have private repositories.  You can apply for an education plan 
+    <a href="https://education.github.com/discount_requests/new" target="_blank">here</a>
+  </p>
+
+  <p>
+   Alternatively, you can use UConn's GitHub at <a href="https://github.uconn.edu/" target="_blank">github.uconn.edu</a>.  Just login with your netID, and you will have unlimited free public and private repositories. However, you cannot collaborate on those repositories with those outside UConn.
+  </p>
+
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
-      <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
-      </p>
+     <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
+      <ol>
+        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
+        <li>Run the installer and follow the steps bellow:
+          <ol>
+            {% comment %} Git 2.17.0 Setup {% endcomment %}
+            {% comment %} Information {% endcomment %}
+            <li>Click on "Next".</li>
+            {% comment %} Select Components {% endcomment %}
+            <li>Click on "Next".</li>
+            {% comment %} Choosing the default editor {% endcomment %}
+            <li>
+            	<strong>
+            	 Select "Use the Nano editor by default" and click on "Next"
+            	</strong>
+            </li>
+            {% comment %} Adjusting your PATH environment {% endcomment %}
+            <li>
+              <strong>
+                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
+              </strong>
+                If you forgot to do this, programs that you need for the workshop will not work properly.
+                If this happens rerun the installer and select the appropriate option.
+            </li>
+            {% comment %} Choosing the SSH executable {% endcomment %}
+            <li>
+                Keep "Use Use OpenSSH" selected and click on "Next".
+            </li>
+            {% comment %} Choosing HTTPS transport backend {% endcomment %}
+            <li>
+                Keep "Use Use OpenSSL library" selected and click on "Next".
+            </li>
+            {% comment %} Configuring the line ending conversions {% endcomment %}
+            <li>
+              <strong>
+                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
+              </strong>
+            </li>
+            {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
+            <li>
+              <strong>
+                Keep "Use MinTTY" selected and click on "Next".
+              </strong>
+            </li>
+            {% comment %} Configuring extra options {% endcomment %}
+            <li>
+                Keep "Enable file system caching" and "Enable Git Credential Manager" selected and click on "Next".
+            </li>
+          </ol>
+        </li>
+      </ol>
     </div>
+
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
@@ -443,78 +450,6 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
     </div>
   </div>
 </div> {% comment %} End of 'Git' section. {% endcomment %}
-
-<div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
-  <h3>Text Editor</h3>
-
-  <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on macOS and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="editor-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        To install it,
-        download the <a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Library Carpentry
-          {% endif %}
-          Windows installer
-	</a>
-        and double click on the file to run it.
-        <strong>This installer requires an active internet connection.</strong>
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx">macOS</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open nano.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-linux">Linux</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-        <a href="http://kate-editor.org/">Kate</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-  </div>
-</div> {% comment %} End of 'editor' section. {% endcomment %}
 
 <div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
   <h3>R</h3>
@@ -571,46 +506,91 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
   <h3>SQLite</h3>
 
   <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
+    SQL is a specialized programming language used with a variety databases.  We
+    use a simple, file-based database manager called
     <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <p>
+  	We will also use a visual database browser called 
+  	<a href="http://sqlitebrowser.org/" target="_blank">DB Browser for SQLite</a> 
+  	to see the results of our SQL queries.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Library Carpentry
-          {% endif %}
-          Windows Installer
-	</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
+      <ol>
+      	<li>SQLite (Databases)
+      	  <ol>
+      	    <li>
+      	  	  The <a href="{{site.swc_installer}}">
+              {% if page.carpentry == "swc" %}
+              Software Carpentry
+              {% elsif page.carpentry == "dc" %}
+              Data Carpentry
+              {% elsif page.carpentry == "lc" %}
+              Library Carpentry
+              {% endif %}
+              Windows Installer
+		      </a>
+              installs SQLite for Windows.</li>
+            <li>Alternatively</li>
+      	  </ol>
+      	</li>
+      	<li>DB Browser for SQLite
+      	  <ol>
+      	    <li>
+      	      Download and install the Windows version of
+      	      <a href="http://sqlitebrowser.org/" target="_blank">DB Browser for SQLite</a>.  
+      	      Most people will want the 64-bit version. 
+      	      If you have problems, try the 32-bit version. 
+      	      You could also use the PortableApps version, 
+      	      which does not require installing.</li>
+      	  </ol>
+      	</li>
+      </ol>
     </div>
     <div class="col-md-4">
       <h4 id="sql-macosx">macOS</h4>
-      <p>
-        SQLite comes pre-installed on macOS.
-      </p>
+      <ol>	
+      	<li>SQLite
+      	  <ol>
+      	    <li>SQLite comes pre-installed on macOS.</li>
+      	  </ol>
+      	</li>
+      	<li>DB Browser for SQLite
+      	  <ol>
+      	    <li>
+      	      Download and install the Mac version of 
+      	      <a href="http://sqlitebrowser.org/" target="_blank">DB Browser for SQLite</a>.   
+			</li>
+      	  </ol>
+      	</li>
+      </ol>
     </div>
     <div class="col-md-4">
       <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
+ 	  <ol>	
+      	<li>SQLite
+      	  <ol>
+      	    <li>SQLite comes pre-installed on Linux.</li>
+      	  </ol>
+      	</li>
+      	<li>DB Browser for SQLite
+      	  <ol>
+      	    <li>For Ubuntu and derivatives, run the following:
+      	      1. Add the repository: <code>sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser</code>
+      	      2. Update the cache: <code>sudo apt-get update</code>
+      	      3. Install package: <code>sudo apt-get install sqlitebrowser</code>
+      	    </li>
+      	    <li>For Fedora, run <code>sudo dnf install sqlitebrowser</code>.
+			</li>
+      	  </ol>
+      	</li>
+      </ol>
     </div>
   </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
 </div> {% comment %} End of 'SQLite' section. {% endcomment %}
 
 <div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
@@ -633,7 +613,7 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
       <p>Create a new directory called OpenRefine.</p>
       <p>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </p>
       <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by clicking <code>google-refine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
+      <p>Launch OpenRefine by clicking <code>openrefine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
       <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
     </div>
     <div class="col-md-4">
@@ -659,6 +639,69 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
     </div>
   </div>
 </div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
+
+<div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
+  <h3>Text Editor</h3>
+
+  <p>
+    When you're writing code, it's nice to have a text editor that is
+    optimized for writing code, with features like automatic
+    color-coding of key words.  The default text editor on macOS and
+    Linux is usually set to Vim, which is not famous for being
+    intuitive.  if you accidentally find yourself stuck in it, try
+    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
+    exclamation mark), then hitting Return to return to the shell.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="editor-windows">Windows</h4>
+      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
+      <p>
+        nano is a basic editor and the default that instructors use in the workshop.
+		See the Git installation <a href="https://www.youtube.com/watch?v=339AEqk9c-8">video tutorial</a>
+        for an example on how to open nano.
+        It should be installed when you install Git.
+      </p>
+      <p>
+        Others editors that you can use are
+        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
+        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+        <strong>Be aware that you must
+          add its installation directory to your system path.</strong>
+        Please ask your instructor to help you do this.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="editor-macosx">macOS</h4>
+      <p>
+        nano is a basic editor and the default that instructors use in the workshop.
+        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+        for an example on how to open nano.
+        It should be pre-installed.
+      </p>
+      <p>
+        Others editors that you can use are
+        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="editor-linux">Linux</h4>
+      <p>
+        nano is a basic editor and the default that instructors use in the workshop.
+        It should be pre-installed.
+      </p>
+      <p>
+        Others editors that you can use are
+        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
+        <a href="http://kate-editor.org/">Kate</a> or
+        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+      </p>
+    </div>
+  </div>
+</div> {% comment %} End of 'editor' section. {% endcomment %}
+
 
 {% comment %}
 <div id="vm">
