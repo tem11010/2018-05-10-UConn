@@ -581,9 +581,12 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
       	  <ol>
       	    <li>For Ubuntu and derivatives, run the following in a terminal:
       	      <ol>
-      	        <li>Add the repository: <code>sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser</code></li>
-      	        <li>Update the cache: <code>sudo apt-get update</code></li>
-      	        <li>Install package: <code>sudo apt-get install sqlitebrowser</code></li>
+      	        <li>Add the repository: <br/>
+      	        <code>sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser</code></li>
+      	        <li>Update the cache: <br/>
+      	        <code>sudo apt-get update</code></li>
+      	        <li>Install package: <br/>
+      	        <code>sudo apt-get install sqlitebrowser</code></li>
       	      </ol>
       	    </li>
       	    <li>For Fedora, run <code>sudo dnf install sqlitebrowser</code>.
