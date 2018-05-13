@@ -266,6 +266,16 @@ eventbrite:     "44981464772"      # optional: alphanumeric key for Eventbrite r
 <hr/>
 
 {% comment %}
+  Resources section where links can be added to additional resources
+{% endcomment %}
+
+<h2 id="resources">Resources</h2>
+
+{% include sc/resources.html %}
+
+<hr/>
+
+{% comment %}
   SETUP
 
   Delete irrelevant sections from the setup instructions.  Each
