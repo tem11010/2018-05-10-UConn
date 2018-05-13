@@ -1,0 +1,110 @@
+### Starting Git workshop. ###
+pwd
+cd
+cd Desktop/
+mkdir guacamole
+cd guacamole
+pwd
+git config --list
+git config --global user.name "Pariksheet Nanda"
+git config --global user.email pariksheet.nanda@uconn.edu
+git config --global core.editor "nano -w"
+git config --global core.autocrlf true  # Windows only!
+git config --global core.autocrlf input # Everyone else.
+git config --list
+pwd
+ls
+git init
+ls
+# Because the .git directory is hidden, it survives "rm *".
+rm *
+ls -a
+git status
+nano ingredients.txt
+nano ingredients.txt
+cat ingredients.txt
+git status
+git add ingredients.txt
+git status
+git commit -m "Started tracking guacamole recipe"
+git status
+git log
+ls -a
+ls .git
+nano ingredients.txt
+cat ingredients.txt
+git status
+git diff
+git add ingredients.txt
+git commit -m "Make more guacamoly"
+git status
+nano ingredients.txt
+cat ingredients.txt
+git commit ingredients.txt -m "Add tartness using tamarind"
+git log
+git log -1
+git log --oneline
+# Easier to see lots of messages using the pager.
+GIT_PAGER="less" git log
+nano ingredients.txt
+cat ingredients.txt
+# Using git diff in more detail.
+git diff HEAD ingredients.txt
+git diff
+git diff HEAD~1 ingredients.txt
+git diff HEAD~2 ingredients.txt
+git show HEAD~2 ingredients.txt
+# I prefer git log -p
+git log -p
+GIT_PAGER=less git log -p
+GIT_PAGER=less git log -p --oneline
+git status
+git diff
+git add ingredients.txt
+# Why do we see no difference now?
+git diff
+# Because we need to instead compare the stage to the history.
+git diff --staged
+git commit -m "Add lime"
+# Make a bad commit that we want to undo.
+nano ingredients.txt
+git status
+git diff
+git commit ingredients.txt -m 'Add extra ingredient'
+cat ingredients.txt
+git log --oneline
+# Not using a file name will put us in the dreaded detached head state.
+git checkout b356459
+git log --oneline
+# Fix detached head by checking out the master branch.
+git checkout master
+git log --oneline
+# Undo our bad commit.
+git checkout b356459 ingredients.txt
+git status
+git diff
+git diff --staged
+git commit -m "Don't poison our guests!"
+git log --oneline
+git status
+# Ignoring files.
+mkdir results
+touch a.dat b.dat c.dat results/a.out results/b.out
+git status
+nano .gitignore
+cat .gitignore
+git status
+git add .gitignore
+git commit -m "Ignore data files and results folder"
+git status
+# Adding an ignore file will ask us to confirm.
+git add a.dat
+git status --ignored
+# Collaborate on GitHub.
+git remote add origin git@github.com:omsai/guacamole.git
+git push -u origin master
+git remote -v
+nano ingredients.txt #  Only person on the left!
+git diff
+git commit ingredients.txt -m "Add more spice!"
+git push
